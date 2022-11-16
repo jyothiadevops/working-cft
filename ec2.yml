@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Basic EC2 Instance.
+
+Resources:
+  SubbuEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-09d3b3274b6c5d4aa
+      InstanceType: t2.micro
+      KeyName: us-key
+      SecurityGroups:
+        - default
+      Tags:
+        - Key: Name
+          Value: App=server
+        - Key: Owner
+          Value: Subbu
+        - Key: MW
+          Value: 3rd-Sun-10-11AM-IST
